@@ -1,0 +1,79 @@
+body {
+	background-image: url("imgs/blue_space.jpg");
+}
+
+#board {
+	width: 800px;
+	height: 800px;
+	/* these two properties below
+	allow for the newly create 'square' divs
+	to populate the entire field of these dimensions
+	of 800 by 800 */
+	display: flex;
+	flex-wrap: wrap;
+	border: 15px solid black;
+	border-radius: 10px;
+}
+.square {
+	height: 100px;
+	width: 100px;
+	position: relative;
+}
+
+.square svg {
+	height: 90px;
+	width: 90px;
+	margin: 5px;
+	position: relative;
+	z-index: -9; // makes sure svg is behind square
+}
+
+path {
+	position: relative;
+	z-index: -10; // makes sure path is behind svg
+}
+
+.piece {
+	position: relative;
+	z-index: 9; // this puts it inFRONT of the square
+}
+
+.beige {
+	background-image: url("imgs/white_brick.jpg");
+}
+
+.brown {
+	background-image: url("imgs/red_wood.jpg");
+}
+
+.white {
+	fill: white;
+	stroke: black;
+	stroke-width: 10px;
+}
+
+.black {
+	fill: black;
+	stroke: black;
+	stroke-width: 10px;
+}
+
+#turn-info {
+	color: white;
+	font-size: 50px;
+}
+
+#buttons {
+	padding-top: 400px;
+	display: flex;
+	flex-direction: column;
+}
+#main {
+	display: inline-flex;
+	margin-top: 50px;
+	margin-left: 27%;
+	margin-right: 23%;
+}
+#container {
+
+}
